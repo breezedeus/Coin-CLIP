@@ -1,4 +1,4 @@
-# Coin-CLIP
+# 基于 Coin-CLIP 的硬币搜索引擎
 **开源 [Coin-CLIP](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) 模型** `breezedeus/coin-clip-vit-base-patch32` 
 在 OpenAI 的 **[CLIP](https://huggingface.co/openai/clip-vit-base-patch32) (ViT-B/32)** 模型基础上，利用对比学习技术在超过 `340,000` 张硬币图片数据上微调得到的。
 Coin-CLIP 旨在提高硬币图像的特征提取能力，从而实现更准确的以图搜图功能。该模型结合了视觉变换器（ViT）的强大功能和 CLIP 的多模态学习能力，并专门针对硬币图像进行了优化。

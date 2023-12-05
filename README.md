@@ -1,4 +1,4 @@
-# Coin-CLIP
+# Coin Search Engine by Coin-CLIP 🪙 
 **Open Source [Coin-CLIP](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) Model** `breezedeus/coin-clip-vit-base-patch32` 
 Based on OpenAI's **[CLIP](https://huggingface.co/openai/clip-vit-base-patch32) (ViT-B/32)** model, this model is fine-tuned on more than `340,000` coin images using contrastive learning techniques.
 Coin-CLIP aims to enhance feature extraction capabilities for coin images, thereby achieving more accurate image-based search functionality. This model combines the powerful capabilities of Visual Transformer (ViT) with CLIP's multimodal learning ability, specifically optimized for coin images.
