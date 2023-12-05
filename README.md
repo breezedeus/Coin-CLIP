@@ -9,9 +9,11 @@ To further simplify the use of the **Coin-CLIP** model, this project provides to
 # Comparison: Coin-CLIP vs. CLIP
 
 #### Example 1 (Left: Coin-CLIP; Right: CLIP)
+
 ![1. Coin-CLIP vs. CLIP](./docs/images/1-c.gif)
 
 #### Example 2 (Left: Coin-CLIP; Right: CLIP)
+
 ![2. Coin-CLIP vs. CLIP](./docs/images/2-c.gif)
 
 #### More Examples
