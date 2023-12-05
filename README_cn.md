@@ -6,6 +6,7 @@ Coin-CLIP 旨在提高硬币图像的特征提取能力，从而实现更准确�
 为进一步简化 Coin-CLIP 模型的使用，本项目提供了一些工具，以便快捷地构建硬币图像特征检索引擎。
 
 # Install
+
 ```
 pip install coin_clip
 ```
