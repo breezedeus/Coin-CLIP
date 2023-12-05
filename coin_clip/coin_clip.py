@@ -1,4 +1,22 @@
 # coding: utf-8
+# Copyright (C) 2023, [Breezedeus](https://github.com/breezedeus).
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
 import logging
 from typing import List, Union, Tuple, Dict, Any
 from pathlib import Path
@@ -48,15 +66,15 @@ class CoinClip(BaseModel):
         self, texts: List[str], max_length: int = 77, mode: str = 'eval'
     ) -> np.ndarray:
         """
-        抽取文字特征。
+        Extract text features.
 
         Args:
-            texts (list): 待抽取的文字列表
-            max_length (int): token最大长度, CLIP 支持的最大程度是77！
-            mode (str): 运行模式，'eval' 或 'train'
+            texts (list): List of text to be extracted.
+            max_length (int): Maximum token length; CLIP supports a maximum of 77!.
+            mode (str): Execution mode, 'eval' or 'train'.
 
-        Returns (np.ndarray): 已归一化后的稠密向量，维度为 [<列表长度>, 512]
-
+        Returns:
+            (np.ndarray): Normalized dense vectors, with dimensions [<Length of the List>, 512].
         """
         inputs = self.tokenizer(
             texts,
@@ -82,17 +100,16 @@ class CoinClip(BaseModel):
         mode: str = 'eval',
     ) -> Tuple[np.ndarray, List[int]]:
         """
-        抽取图片特征。
+        Extract image features.
 
         Args:
-            all_imgs (): 待抽取的图片列表
-            img_batch_size (): batch size
-            mode (str): 运行模式，'eval' 或 'train'
+            all_imgs (): List of images to be extracted.
+            img_batch_size (): Batch size.
+            mode (str): Execution mode, 'eval' or 'train'.
 
         Returns:
-            第一个值为抽取出的图片特征，为已归一化后的稠密向量，维度为 [<成功抽取的图片数量>, 512]
-            第二个值为成功抽取的图片索引（有些图片因为某些原因会导入失败），长度为 `<成功抽取的图片数量>`
-
+            The first value is the extracted image features, which are normalized dense vectors, with dimensions [<Number of Successfully Extracted Images>, 512].
+            The second value is the indices of successfully extracted images (some images may fail to import for certain reasons), with a length of `<Number of Successfully Extracted Images>`.
         """
         img_features = []
         success_ids = []

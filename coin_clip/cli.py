@@ -1,4 +1,21 @@
 # coding: utf-8
+# Copyright (C) 2023, [Breezedeus](https://github.com/breezedeus).
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
 
 import os
 import logging
@@ -35,12 +52,12 @@ def cli():
     '--model-name',
     type=str,
     default='breezedeus/coin-clip-vit-base-patch32"',
-    help='模型文件或者名字',
+    help='Model Name; either local path or huggingface model name',
 )
 @click.option(
     "-d",
     "--device",
-    help="['cpu', 'cuda']; 使用cpu还是 `gpu` 运行代码，也可指定为特定gpu，如`cuda:0`。默认为 `cpu`",
+    help="['cpu', 'cuda']; Either 'cpu' or 'gpu', or specify a specific GPU like 'cuda:0'. Default is 'cpu'.",
     type=str,
     default='cpu',
 )
@@ -56,12 +73,14 @@ def cli():
     '--output-db-dir',
     type=str,
     default='./coin_clip_chroma.db',
-    help='构件好的搜索引擎，存放的文件夹',
+    help='Folder where the built search engine is stored.',
 )
 def extract_embeds_build_db(
     model_name, device, input_image_dir, output_db_dir,
 ):
-    """抽取候选图片集的向量，并基于此构建搜索引擎"""
+    """
+    Extract vectors from a candidate image set and build a search engine based on it.
+    """
     set_logger('INFO')
 
     image_fps = read_img_fps(input_image_dir)
@@ -76,7 +95,7 @@ def extract_embeds_build_db(
     collection = client.create_collection(
         name='coin_clip_collection',
         embedding_function=embedding_function,
-        # metadata={"hnsw:space": "cosine"},  # l2 is the default
+        metadata={"hnsw:space": "cosine"},  # l2 is the default
         data_loader=image_loader,
     )
 
@@ -91,17 +110,20 @@ def extract_embeds_build_db(
     '--model-name',
     type=str,
     default='breezedeus/coin-clip-vit-base-patch32"',
-    help='模型文件或者名字',
+    help='Model Name; either local path or huggingface model name',
 )
 @click.option(
     "-d",
     "--device",
-    help="['cpu', 'cuda']; 使用cpu还是 `gpu` 运行代码，也可指定为特定gpu，如`cuda:0`。默认为 `cpu`",
+    help="['cpu', 'cuda']; Either 'cpu' or 'gpu', or specify a specific GPU like 'cuda:0'. Default is 'cpu'.",
     type=str,
     default='cpu',
 )
 @click.option(
-    '--db-dir', type=str, default='./coin_clip_chroma.db', help='构件好的搜索引擎，存放的文件夹',
+    '--db-dir',
+    type=str,
+    default='./coin_clip_chroma.db',
+    help='Folder where the built search engine is stored.',
 )
 @click.option(
     '-i', '--image-fp', type=str, required=True, help='Image Path to retrieve',
@@ -109,7 +131,9 @@ def extract_embeds_build_db(
 def retrieve(
     model_name, device, db_dir, image_fp,
 ):
-    """抽取候选图片集的向量，并基于此构建搜索引擎"""
+    """
+    Retrieve images from the search engine, based on the query image.
+    """
     set_logger('INFO')
 
     client = chromadb.PersistentClient(
@@ -123,7 +147,9 @@ def retrieve(
         embedding_function=embedding_function,
         data_loader=image_loader,
     )
-    logger.info('%d Items in the collection', collection.count())  # returns the number of items in the collection
+    logger.info(
+        '%d Items in the collection', collection.count()
+    )  # returns the number of items in the collection
 
     query_image = np.array(read_img(image_fp))
     retrieved = collection.query(

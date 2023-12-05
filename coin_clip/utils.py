@@ -21,7 +21,7 @@ logger = logging.getLogger()
 def set_logger(level=logging.INFO):
     logger.setLevel(level)
 
-    # 创建一个带有颜色的日志记录器
+    # Create a logger with color.
     handler = colorlog.StreamHandler()
     handler.setFormatter(
         colorlog.ColoredFormatter(
