@@ -47,14 +47,16 @@ Usage: coin-clip build-db [OPTIONS]
 
 Options:
   -m, --model-name TEXT       Model Name; either local path or huggingface
-                              model name
+                              model name  [default: breezedeus/coin-clip-vit-
+                              base-patch32]
   -d, --device TEXT           ['cpu', 'cuda']; Either 'cpu' or 'gpu', or
                               specify a specific GPU like 'cuda:0'. Default is
-                              'cpu'.
+                              'cpu'.  [default: cpu]
   -i, --input-image-dir TEXT  Image Folder to Extract Embeddings  [required]
   -o, --output-db-dir TEXT    Folder where the built search engine is stored.
+                              [default: ./coin_clip_chroma.db]
   -h, --help                  Show this message and exit.
-  ```
+```
 
 ### Querying
 After building the vector search engine with the above command, you can use the `coin-clip retrieve` command to retrieve the coin images 🪙 most similar to a specified coin image.
@@ -67,10 +69,13 @@ Usage: coin-clip retrieve [OPTIONS]
 
 Options:
   -m, --model-name TEXT  Model Name; either local path or huggingface model
-                         name
+                         name  [default: breezedeus/coin-clip-vit-base-
+                         patch32]
   -d, --device TEXT      ['cpu', 'cuda']; Either 'cpu' or 'gpu', or specify a
                          specific GPU like 'cuda:0'. Default is 'cpu'.
+                         [default: cpu]
   --db-dir TEXT          Folder where the built search engine is stored.
+                         [default: ./coin_clip_chroma.db]
   -i, --image-fp TEXT    Image Path to retrieve  [required]
   -h, --help             Show this message and exit.
 ```
