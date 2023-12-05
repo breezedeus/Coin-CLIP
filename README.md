@@ -1,9 +1,9 @@
 # Coin-CLIP
 **Open Source [Coin-CLIP](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) Model** `breezedeus/coin-clip-vit-base-patch32` 
-Based on OpenAI's [CLIP](https://huggingface.co/openai/clip-vit-base-patch32) (ViT-B/32) model, this model is fine-tuned on more than `340,000` coin images using contrastive learning techniques.
+Based on OpenAI's **[CLIP](https://huggingface.co/openai/clip-vit-base-patch32) (ViT-B/32)** model, this model is fine-tuned on more than `340,000` coin images using contrastive learning techniques.
 Coin-CLIP aims to enhance feature extraction capabilities for coin images, thereby achieving more accurate image-based search functionality. This model combines the powerful capabilities of Visual Transformer (ViT) with CLIP's multimodal learning ability, specifically optimized for coin images.
 
-To further simplify the use of the Coin-CLIP model, this project provides tools for quickly building a coin image feature search engine.
+To further simplify the use of the **Coin-CLIP** model, this project provides tools for quickly building a coin image feature search engine.
 
 # Install
 
@@ -29,7 +29,7 @@ print(img_feats.shape)  # --> (2, 512)
 > ⚠️ **Note**:
 > 
 > The above code automatically downloads the [`breezedeus/coin-clip-vit-base-patch32`](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) model from Huggingface.
-If you cannot download automatically, please manually download the model locally, and then initialize CoinClip by specifying the local directory of the model through the model_name parameter, like model_name='path/to/coin-clip-vit-base-patch32'.
+If you cannot download automatically, please manually download the model locally, and then initialize `CoinClip` by specifying the local directory of the model through the `model_name` parameter, like `model_name='path/to/coin-clip-vit-base-patch32'`.
 
 ## Command line tools
 
