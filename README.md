@@ -10,11 +10,11 @@ To further simplify the use of the **Coin-CLIP** model, this project provides to
 
 #### Example 1 (Left: Coin-CLIP; Right: CLIP)
 
-![1. Coin-CLIP vs. CLIP](./docs/images/1-c.gif)
+![1. Coin-CLIP vs. CLIP](./docs/images/3-c.gif)
 
 #### Example 2 (Left: Coin-CLIP; Right: CLIP)
 
-![2. Coin-CLIP vs. CLIP](./docs/images/2-c.gif)
+![2. Coin-CLIP vs. CLIP](./docs/images/5-c.gif)
 
 #### More Examples
 
@@ -23,13 +23,13 @@ To further simplify the use of the **Coin-CLIP** model, this project provides to
 <summary>more</summary>
 
 Example 3 (Left: Coin-CLIP; Right: CLIP)
-![3. Coin-CLIP vs. CLIP](./docs/images/3-c.gif)
+![3. Coin-CLIP vs. CLIP](./docs/images/1-c.gif)
 
 Example 4 (Left: Coin-CLIP; Right: CLIP)
 ![4. Coin-CLIP vs. CLIP](./docs/images/4-c.gif)
 
 Example 5 (Left: Coin-CLIP; Right: CLIP)
-![5. Coin-CLIP vs. CLIP](./docs/images/5-c.gif)
+![5. Coin-CLIP vs. CLIP](./docs/images/2-c.gif)
 
 Example 6 (Left: Coin-CLIP; Right: CLIP)
 ![6. Coin-CLIP vs. CLIP](./docs/images/6-c.gif)
