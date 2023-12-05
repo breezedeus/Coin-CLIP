@@ -51,8 +51,9 @@ def cli():
     '-m',
     '--model-name',
     type=str,
-    default='breezedeus/coin-clip-vit-base-patch32"',
+    default='breezedeus/coin-clip-vit-base-patch32',
     help='Model Name; either local path or huggingface model name',
+    show_default=True,
 )
 @click.option(
     "-d",
@@ -60,6 +61,7 @@ def cli():
     help="['cpu', 'cuda']; Either 'cpu' or 'gpu', or specify a specific GPU like 'cuda:0'. Default is 'cpu'.",
     type=str,
     default='cpu',
+    show_default=True,
 )
 @click.option(
     '-i',
@@ -74,6 +76,7 @@ def cli():
     type=str,
     default='./coin_clip_chroma.db',
     help='Folder where the built search engine is stored.',
+    show_default=True,
 )
 def extract_embeds_build_db(
     model_name, device, input_image_dir, output_db_dir,
@@ -109,8 +112,9 @@ def extract_embeds_build_db(
     '-m',
     '--model-name',
     type=str,
-    default='breezedeus/coin-clip-vit-base-patch32"',
+    default='breezedeus/coin-clip-vit-base-patch32',
     help='Model Name; either local path or huggingface model name',
+    show_default=True,
 )
 @click.option(
     "-d",
@@ -118,12 +122,14 @@ def extract_embeds_build_db(
     help="['cpu', 'cuda']; Either 'cpu' or 'gpu', or specify a specific GPU like 'cuda:0'. Default is 'cpu'.",
     type=str,
     default='cpu',
+    show_default=True,
 )
 @click.option(
     '--db-dir',
     type=str,
     default='./coin_clip_chroma.db',
     help='Folder where the built search engine is stored.',
+    show_default=True,
 )
 @click.option(
     '-i', '--image-fp', type=str, required=True, help='Image Path to retrieve',
