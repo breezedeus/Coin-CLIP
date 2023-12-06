@@ -1,10 +1,10 @@
-# Coin Search Engine by Coin-CLIP 🪙 
+# Coin Retrieval by Coin-CLIP 🪙 
 Based on OpenAI's **[CLIP](https://huggingface.co/openai/clip-vit-base-patch32) (ViT-B/32)** model, 
 we build the **[Coin-CLIP](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) Model** `breezedeus/coin-clip-vit-base-patch32`,
 which is fine-tuned on more than `340,000` coin images using contrastive learning techniques.
 **Coin-CLIP** aims to enhance feature extraction capabilities for coin images, thereby achieving more accurate image-based search functionality. This model combines the powerful capabilities of Visual Transformer (ViT) with CLIP's multimodal learning ability, specifically optimized for coin images.
 
-To further simplify the use of the **Coin-CLIP** model, this project provides tools for quickly building a coin image feature search engine.
+To further simplify the use of the **Coin-CLIP** model, this project provides tools for quickly building a coin image retrieval engine.
 
 # Comparison: Coin-CLIP vs. CLIP
 
@@ -64,7 +64,7 @@ If you cannot download automatically, please manually download the model locally
 
 ## Command line tools
 
-### Building a Vector Search Engine
+### Building a Vector Retrieval Engine
 
 `coin-clip build-db` can be used to build a vector search engine. It extracts features from all coin images 🪙 in a specified directory and builds a ChromaDB vector search engine.
 
@@ -82,10 +82,16 @@ Options:
   -d, --device TEXT           ['cpu', 'cuda']; Either 'cpu' or 'gpu', or
                               specify a specific GPU like 'cuda:0'. Default is
                               'cpu'.  [default: cpu]
-  -i, --input-image-dir TEXT  Image Folder to Extract Embeddings  [required]
+  -i, --input-image-dir TEXT  Folder with Coin Images to be indexed. [required]
   -o, --output-db-dir TEXT    Folder where the built search engine is stored.
                               [default: ./coin_clip_chroma.db]
   -h, --help                  Show this message and exit.
+```
+
+For instance, 
+
+```bash
+$ coin-clip build-db -i examples -o coin_clip_chroma.db
 ```
 
 ### Querying
@@ -108,4 +114,10 @@ Options:
                          [default: ./coin_clip_chroma.db]
   -i, --image-fp TEXT    Image Path to retrieve  [required]
   -h, --help             Show this message and exit.
+```
+
+For instance, 
+
+```bash
+$ coin-clip retrieve --db-dir coin_clip_chroma.db -i examples/10_back.jpg
 ```

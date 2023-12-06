@@ -68,7 +68,8 @@ def cli():
     '--input-image-dir',
     type=str,
     required=True,
-    help='Image Folder to Extract Embeddings',
+    help='Folder with Coin Images to be indexed.',
+    show_default=True,
 )
 @click.option(
     '-o',

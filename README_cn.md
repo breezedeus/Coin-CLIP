@@ -1,9 +1,9 @@
-# 基于 Coin-CLIP 的硬币搜索引擎
+# 基于 Coin-CLIP 的硬币检索引擎
 **开源 [Coin-CLIP](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) 模型** `breezedeus/coin-clip-vit-base-patch32` 
 在 OpenAI 的 **[CLIP](https://huggingface.co/openai/clip-vit-base-patch32) (ViT-B/32)** 模型基础上，利用对比学习技术在超过 `340,000` 张硬币图片数据上微调得到的。
-**Coin-CLIP** 旨在提高硬币图像的特征提取能力，从而实现更准确的以图搜图功能。该模型结合了视觉变换器（ViT）的强大功能和 CLIP 的多模态学习能力，并专门针对硬币图像进行了优化。
+**Coin-CLIP** 旨在提高模型针对硬币图片的特征提取能力，从而实现更准确的以图搜图功能。该模型结合了视觉变换器（ViT）的强大功能和 CLIP 的多模态学习能力，并专门针对硬币图片进行了优化。
 
-为进一步简化 **Coin-CLIP** 模型的使用，本项目提供了一些工具，以便快捷地构建硬币图像特征检索引擎。
+为进一步简化 **Coin-CLIP** 模型的使用流程，本项目提供了一些工具以便快捷地构建硬币图像特征检索引擎。
 
 # 效果对比：Coin-CLIP vs. CLIP
 
@@ -81,10 +81,16 @@ Options:
   -d, --device TEXT           ['cpu', 'cuda']; Either 'cpu' or 'gpu', or
                               specify a specific GPU like 'cuda:0'. Default is
                               'cpu'.  [default: cpu]
-  -i, --input-image-dir TEXT  Image Folder to Extract Embeddings  [required]
+  -i, --input-image-dir TEXT  Folder with Coin Images to be indexed. [required]
   -o, --output-db-dir TEXT    Folder where the built search engine is stored.
                               [default: ./coin_clip_chroma.db]
   -h, --help                  Show this message and exit.
+```
+
+例如：
+
+```bash
+$ coin-clip build-db -i examples -o coin_clip_chroma.db
 ```
 
 ### 查询
@@ -108,4 +114,10 @@ Options:
                          [default: ./coin_clip_chroma.db]
   -i, --image-fp TEXT    Image Path to retrieve  [required]
   -h, --help             Show this message and exit.
+```
+
+例如：
+
+```bash
+$ coin-clip retrieve --db-dir coin_clip_chroma.db -i examples/10_back.jpg
 ```

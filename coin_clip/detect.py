@@ -124,7 +124,7 @@ if __name__ == '__main__':
     import time
 
     model_name = "google/owlvit-base-patch32"
-    img_path = 'examples/c4.jpeg'
+    img_path = 'docs/c4.jpg'
     img = read_img(img_path)
     w, h = img.size
     img = img.resize((w // 2, h // 2))
