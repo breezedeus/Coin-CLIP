@@ -54,7 +54,7 @@ coin-clip = coin_clip.cli:cli
 setup(
     name=PACKAGE_NAME,
     version=about['__version__'],
-    description="Use CLIP, Detection and Recognition models to retrieve similar coin images",
+    description="Enhancing Coin Image Retrieval with CLIP",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='breezedeus',
