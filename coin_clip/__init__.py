@@ -17,5 +17,5 @@
 # specific language governing permissions and limitations
 # under the License.
 
-from .coin_clip import CoinClip
+from .coinclip import CoinClip
 from .chroma_embedding import ChromaEmbeddingFunction

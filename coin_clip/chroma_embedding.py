@@ -23,7 +23,7 @@ from typing import cast
 from chromadb.utils.embedding_functions import OpenCLIPEmbeddingFunction
 from chromadb.api.types import Document, Embedding, Image
 
-from .coin_clip import CoinClip
+from .coinclip import CoinClip
 
 
 class ChromaEmbeddingFunction(OpenCLIPEmbeddingFunction):
