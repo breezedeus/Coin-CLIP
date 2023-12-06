@@ -44,14 +44,14 @@ Example 6 (Left: Coin-CLIP; Right: CLIP)
 
 </details>
 
-# Install
+# 安装
 
-```
+```bash
 pip install coin_clip
 ```
 
-# Usage
-## Code examples
+# 使用
+## 代码调用
 
 ### 抽取硬币图片的特征向量
 
@@ -70,7 +70,7 @@ print(img_feats.shape)  # --> (2, 512)
 > 上面的代码会自动从 Huggingface 下载 [`breezedeus/coin-clip-vit-base-patch32`](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) 模型。
 如果无法自动下载，请手动下载模型到本地，然后初始化 `CoinClip` 时通过 `model_name` 参数指定模型的本地目录，如 `model_name='path/to/coin-clip-vit-base-patch32'`。
 
-## Command line tools
+## 命令行工具
 
 ### 构建向量检索引擎
 

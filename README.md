@@ -52,7 +52,7 @@ Example 6 (Left: Coin-CLIP; Right: CLIP)
 
 # Install
 
-```
+```bash
 pip install coin_clip
 ```
 
