@@ -1,9 +1,11 @@
 # Coin-CLIP 🪙 : Enhancing Coin Image Retrieval with CLIP
 
  <div align="center">
+ <strong>
 
-[中文](./README_cn.md) | English
+[[中文]](./README_cn.md) | [English]
 
+ </strong>
 </div>
 
 **[Coin-CLIP](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32)** `breezedeus/coin-clip-vit-base-patch32` is built upon 

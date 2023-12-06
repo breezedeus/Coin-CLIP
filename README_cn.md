@@ -1,9 +1,11 @@
 # Coin-CLIP 🪙 : 利用 CLIP 技术增强硬币图像检索性能
 
  <div align="center">
+ <strong>
 
-[English](./README.md) | 中文
+[[English]](./README.md) | [中文]
 
+ </strong>
 </div>
 
 **开源 [Coin-CLIP](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) 模型** `breezedeus/coin-clip-vit-base-patch32` 
