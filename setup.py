@@ -37,9 +37,13 @@ exec(
 )
 
 required = [
-    "click",
-    "tqdm",
     "colorlog",
+    "click",
+    "numpy",
+    "torch",
+    "torchvision",
+    "transformers",
+    "pillow",
     "chromadb",
 ]
 extras_require = {
