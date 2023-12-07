@@ -1,5 +1,24 @@
 # Coin-CLIP 🪙 : 利用 CLIP 技术增强硬币图像检索性能
 
+<div align="center">
+  <img src="./docs/images/coin-clip-logo.jpg" width="200px"/>
+  <div>&nbsp;</div>
+
+[![Downloads](https://static.pepy.tech/personalized-badge/coin_clip?period=total&units=international_system&left_color=grey&right_color=orange&left_text=Downloads)](https://pepy.tech/project/coin_clip)
+[![license](https://img.shields.io/github/license/breezedeus/coin-clip)](./LICENSE)
+[![PyPI version](https://badge.fury.io/py/coin_clip.svg)](https://badge.fury.io/py/coin_clip)
+[![forks](https://img.shields.io/github/forks/breezedeus/coin-clip)](https://github.com/breezedeus/coin-clip)
+[![stars](https://img.shields.io/github/stars/breezedeus/coin-clip)](https://github.com/breezedeus/coin-clip)
+![last-releast](https://img.shields.io/github/release-date/breezedeus/coin-clip)
+![last-commit](https://img.shields.io/github/last-commit/breezedeus/coin-clip)
+[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fbreezedeus)](https://twitter.com/breezedeus)
+
+[🧳 模型](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32) |
+[🛀🏻 在线Demo](https://huggingface.co/spaces/breezedeus/USA-Coin-Retrieval) |
+[💬 交流群](https://www.breezedeus.com/join-group)
+
+</div>
+
  <div align="center">
  <strong>
 
