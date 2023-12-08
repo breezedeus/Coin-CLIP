@@ -154,3 +154,12 @@ For instance,
 ```bash
 $ coin-clip retrieve --db-dir coin_clip_chroma.db -i examples/10_back.jpg
 ```
+
+
+## A cup of coffee for the author
+
+It is not easy to maintain and evolve the project, so if it is helpful to you, please consider [offering the author a cup of coffee 🥤](https://www.breezedeus.com/buy-me-coffee).
+
+---
+
+Official code base: [https://github.com/breezedeus/coin-clip](https://github.com/breezedeus/coin-clip). Please cite it properly.

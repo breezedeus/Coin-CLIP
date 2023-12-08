@@ -149,3 +149,12 @@ Options:
 ```bash
 $ coin-clip retrieve --db-dir coin_clip_chroma.db -i examples/10_back.jpg
 ```
+
+
+## 给作者来杯咖啡
+
+开源不易，如果此项目对您有帮助，可以考虑 [给作者加点油🥤，鼓鼓气💪🏻缝](https://www.breezedeus.com/buy-me-coffee) 。
+
+---
+
+官方代码库：[https://github.com/breezedeus/coin-clip](https://github.com/breezedeus/coin-clip)。
