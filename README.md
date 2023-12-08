@@ -1,5 +1,3 @@
-# Coin-CLIP 🪙 : Enhancing Coin Image Retrieval with CLIP
-
 <div align="center">
   <img src="./docs/images/coin-clip-logo.png" width="160px"/>
   <div>&nbsp;</div>
@@ -26,6 +24,8 @@
 
  </strong>
 </div>
+
+# Coin-CLIP 🪙 : Enhancing Coin Image Retrieval with CLIP
 
 **[Coin-CLIP](https://huggingface.co/breezedeus/coin-clip-vit-base-patch32)** `breezedeus/coin-clip-vit-base-patch32` is built upon 
 OpenAI's **[CLIP](https://huggingface.co/openai/clip-vit-base-patch32) (ViT-B/32)** model and fine-tuned on 
