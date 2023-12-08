@@ -1,7 +1,7 @@
 # Coin-CLIP 🪙 : Enhancing Coin Image Retrieval with CLIP
 
 <div align="center">
-  <img src="./docs/images/coin-clip-logo.jpg" width="200px"/>
+  <img src="./docs/images/coin-clip-logo.png" width="160px"/>
   <div>&nbsp;</div>
 
 [![Downloads](https://static.pepy.tech/personalized-badge/coin_clip?period=total&units=international_system&left_color=grey&right_color=orange&left_text=Downloads)](https://pepy.tech/project/coin_clip)
